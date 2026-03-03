@@ -9,7 +9,7 @@ Stop wasting 30 minutes in Figma just to share a progress update. ShotCraft help
 - **Bento-box layout generator (HTML/CSS)**
 - **Background gradient picker**
 - **One-click export to PNG**
-- **☕ Support the Creator:** Built by Andrei (@aer.solutions)
+- **☕ Support the Creator:** Built by aer.solutions
 
 ## 🛠 Installation
 1. Download this folder.
@@ -23,4 +23,4 @@ Stop wasting 30 minutes in Figma just to share a progress update. ShotCraft help
 3. **Product Hunt:** Launch as a "Free Developer Utility."
 
 ---
-Built with ✨ Aether & Andrei
+Built with ✨ Aether & aer.solutions
