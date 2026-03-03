@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ShotCraft Bento Editor</title>
+  <style>
+    body { background: #000; color: white; font-family: sans-serif; padding: 40px; display: flex; flex-direction: column; align-items: center; }
+    .bento-grid { 
+      display: grid; 
+      grid-template-columns: 2fr 1fr; 
+      grid-template-rows: 1fr 1fr; 
+      gap: 15px; 
+      width: 800px; 
+      height: 500px; 
+      background: linear-gradient(135deg, #1e1e1e, #111);
+      padding: 20px;
+      border-radius: 24px; 
+      border: 1px solid #333;
+    }
+    .bento-item { background: #222; border-radius: 16px; border: 1px dashed #444; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .bento-item.main { grid-row: span 2; }
+    .bento-item:hover { border-color: #8a2be2; background: #2a2a2a; }
+    .instructions { margin-bottom: 20px; color: #888; }
+    input[type="file"] { position: absolute; opacity: 0; width: 100%; height: 100%; cursor: pointer; }
+    h1 { margin-bottom: 10px; color: #8a2be2; }
+    .btn-save { background:#8a2be2; color:white; border:none; padding:12px 30px; border-radius:10px; font-weight:bold; cursor:pointer; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <h1>Bento Grid ✨</h1>
+  <p class="instructions">Click any box to upload a screenshot. Create the perfect hero asset.</p>
+  <div class="bento-grid">
+    <div class="bento-item main"><input type="file" class="file-input"><span>Drop Hero Image</span></div>
+    <div class="bento-item"><input type="file" class="file-input"><span>Feature 1</span></div>
+    <div class="bento-item"><input type="file" class="file-input"><span>Feature 2</span></div>
+  </div>
+  <button id="saveBento" class="btn-save">Save Bento Grid</button>
+  <script src="bento.js"></script>
+</body>
+</html>

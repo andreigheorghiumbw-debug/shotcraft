@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ShotCraft Preview</title>
+  <style>
+    body { background: #111; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; margin: 0; font-family: sans-serif; }
+    #canvas-container { padding: 80px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); display: flex; flex-direction: column; }
+    .browser-dots { width: 8px; height: 8px; border-radius: 50%; background: #ff5f56; }
+    #screenshot-img { max-width: 80vw; display: block; }
+    .toolbar { margin-top: 20px; display: flex; gap: 10px; }
+    button { background: white; color: black; border: none; padding: 10px 20px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+    .btn-primary { background: #8a2be2; color: white; }
+  </style>
+</head>
+<body>
+  <div id="canvas-container">
+      <div id="browser-chrome" style="display:none; background: #f1f3f4; border-radius: 10px 10px 0 0; padding: 10px; border: 1px solid #dadce0; border-bottom: none; display: flex; gap: 5px;">
+          <div class="browser-dots"></div>
+          <div class="browser-dots" style="background:#ffbd2e"></div>
+          <div class="browser-dots" style="background:#27c93f"></div>
+      </div>
+      <img id="screenshot-img">
+  </div>
+  <div class="toolbar">
+      <button id="downloadBtn" class="btn-primary">Download Image</button>
+      <button id="closeBtn">Close</button>
+  </div>
+  <script src="preview.js"></script>
+</body>
+</html>
