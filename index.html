@@ -8,8 +8,38 @@
         :root { --primary: #8a2be2; --secondary: #00d2ff; --bg: #0a0a0a; --text: #ffffff; }
         body { font-family: -apple-system, system-ui, sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; padding: 40px 20px; text-align: center; }
         .hero { margin-bottom: 60px; padding: 20px; }
-        h1 { font-size: 4rem; margin-bottom: 10px; background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; }
-        .tagline { font-size: 1.4rem; color: #aaa; max-width: 650px; margin: 0 auto; }
+        .logo-container {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            position: relative;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(138, 43, 226, 0.4);
+        }
+        .logo-shutter {
+            width: 40px;
+            height: 40px;
+            border: 4px solid white;
+            border-radius: 50%;
+            position: relative;
+        }
+        .logo-shutter::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: white;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        h1 { font-size: 4rem; margin: 0; background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-weight: 900; letter-spacing: -2px; }
+        .tagline { font-size: 1.4rem; color: #aaa; max-width: 650px; margin: 10px auto 0; }
         
         .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1000px; margin: 60px auto; }
         .feature-card { background: #1a1a1a; padding: 25px; border-radius: 16px; border: 1px solid #333; text-align: left; }
@@ -47,7 +77,9 @@
 </head>
 <body>
     <div class="hero">
-        <img src="icon128.png" width="100" alt="ShotCraft Logo">
+        <div class="logo-container">
+            <div class="logo-shutter"></div>
+        </div>
         <h1>ShotCraft</h1>
         <p class="tagline">Stop opening Figma. Turn your browser tabs into high-end marketing assets in 1-click.</p>
     </div>
